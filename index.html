@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alami Luxe Living Solutions | Kigali, Rwanda</title>
+  <meta name="description" content="Alami Luxe Living Solutions — premium interior design, bespoke furniture, kitchen installation, renovation, painting and complete home transformation in Kigali, Rwanda.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f3ec;
+      color: #25231f;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(25, 24, 21, 0.97);
+      border-bottom: 1px solid rgba(201, 166, 92, 0.35);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #d5b46a;
+      font-size: 1.35rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      display: block;
+      color: #eee7d8;
+      font-family: Arial, sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+    }
+
+    nav a {
+      color: #f5efe3;
+    }
+
+    nav a:hover {
+      color: #d5b46a;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(205, 170, 94, 0.22), transparent 30%),
+        linear-gradient(135deg, #181714 0%, #28251f 55%, #40372a 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(213, 180, 106, 0.25);
+      border-radius: 50%;
+      right: -130px;
+      bottom: -170px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: #d5b46a;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.78rem;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.98;
+      font-weight: normal;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e8e1d4;
+      font-family: Arial, sans-serif;
+      font-size: 1.08rem;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 2px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button-gold {
+      background: #d5b46a;
+      color: #1c1a16;
+    }
+
+    .button-gold:hover {
+      background: #e3c982;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      border: 1px solid #d5b46a;
+      color: #f5efe3;
+    }
+
+    .button-outline:hover {
+      background: rgba(213, 180, 106, 0.12);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading .eyebrow {
+      color: #9d7b35;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      font-weight: normal;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      font-family: Arial, sans-serif;
+      color: #625e56;
+    }
+
+    .about {
+      background: #f7f3ec;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: #25231f;
+      color: #f7f3ec;
+      min-height: 430px;
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 5px solid #d5b46a;
+    }
+
+    .about-card h3 {
+      color: #d5b46a;
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    .about-card p {
+      font-family: Arial, sans-serif;
+      color: #ded8cd;
+    }
+
+    .about-text p {
+      font-family: Arial, sans-serif;
+      color: #5f5b54;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      background: #e9e2d5;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: #f7f3ec;
+      padding: 35px 30px;
+      min-height: 230px;
+      border-top: 2px solid #d5b46a;
+      transition: 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-number {
+      color: #b08b42;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .service h3 {
+      font-size: 1.55rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      font-family: Arial, sans-serif;
+      color: #68635a;
+      font-size: 0.94rem;
+    }
+
+    .process {
+      background: #25231f;
+      color: #f7f3ec;
+    }
+
+    .process .section-heading p {
+      color: #cfc8bb;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      border-top: 1px solid #8d713d;
+      padding-top: 25px;
+    }
+
+    .step strong {
+      display: block;
+      color: #d5b46a;
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-weight: normal;
+      font-size: 1.25rem;
+    }
+
+    .step p {
+      color: #c8c1b5;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: #d5b46a;
+      color: #211f1a;
+    }
+
+    .contact h2 {
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact .button {
+      background: #211f1a;
+      color: white;
+    }
+
+    footer {
+      background: #171613;
+      color: #aaa398;
+      text-align: center;
+      padding: 35px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: #d5b46a;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+
+      .about-grid,
+      .service-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        min-height: 300px;
+        padding: 35px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h1 {
+        font-size: 3.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      ALAMI LUXE
+      <span>LIVING SOLUTIONS</span>
+    </a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">Kigali • Rwanda</div>
+
+      <h1>Creating Homes That Inspire Every Moment.</h1>
+
+      <p>
+        Premium interior design, bespoke furniture, renovation and finishing
+        solutions designed to transform everyday spaces into beautiful,
+        comfortable homes.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-gold"
+           href="https://wa.me/2507XXXXXXXX?text=Hello%20Alami%20Luxe%2C%20I%20would%20like%20a%20quotation."
+           target="_blank">
+          Request a Quote
+        </a>
+
+        <a class="button button-outline" href="#services">
+          Explore Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+
+      <div class="about-card">
+        <h3>Thoughtful spaces. Beautiful living.</h3>
+        <p>
+          Alami Luxe Living Solutions brings together furniture,
+          interiors, renovation and finishing to help clients create
+          homes that feel refined, practical and truly personal.
+        </p>
+      </div>
+
+      <div class="about-text">
+        <div class="eyebrow">About Alami Luxe</div>
+
+        <h2>From one room to a complete home transformation.</h2>
+
+        <p>
+          We believe a beautiful home is more than decoration. It is the
+          balance between comfort, function, craftsmanship and personal style.
+        </p>
+
+        <p>
+          Whether you need a custom sofa, a new bed, a dining set,
+          kitchen installation, painting, repairs or a complete interior
+          transformation, we help bring the vision together from start to finish.
+        </p>
+
+        <p>
+          Based in Kigali, Rwanda, Alami Luxe works with trusted specialists
+          where needed to coordinate quality work across different parts of
+          your project.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">What We Do</div>
+        <h2>Complete living solutions.</h2>
+        <p>
+          From individual furniture pieces to complete home projects,
+          our services are designed around the way you want to live.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service">
+          <div class="service-number">01</div>
+          <h3>Interior Design</h3>
+          <p>
+            Thoughtful layouts, finishes, colours and styling that create
+            elegant and comfortable interiors.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-number">02</div>
+          <h3>Bespoke Furniture</h3>
+          <p>
+            Custom sofas, beds, dining sets and other furniture pieces
+            created around your space and preferences.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-number">03</div>
+          <h3>Kitchen Installation</h3>
+          <p>
+            Practical and beautiful kitchen solutions, from planning and
+            cabinetry to installation and finishing.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-number">04</div>
+          <h3>Renovation & Painting</h3>
+          <p>
+            Refresh tired spaces with renovation work, painting and
+            carefully selected finishing details.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-number">05</div>
+          <h3>Repairs & Finishing</h3>
+          <p>
+            Improve, repair and finish existing spaces so they look
+            cleaner, more polished and complete.
+          </p>
+        </div>
+
+        <div class="service">
+          <div class="service-number">06</div>
+          <h3>Complete Home Transformation</h3>
+          <p>
+            One coordinated vision for projects that bring furniture,
+            interiors, renovation and finishing together.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Our Approach</div>
+        <h2>A clear journey from idea to finished space.</h2>
+        <p>
+          Every project starts with understanding what you need,
+          what you love and what your space requires.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="step">
+          <strong>01</strong>
+          <h3>Consultation</h3>
+          <p>
+            Tell us about your space, needs, style and project goals.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>02</strong>
+          <h3>Planning</h3>
+          <p>
+            We discuss the concept, materials, scope and practical requirements.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>03</strong>
+          <h3>Craft & Transform</h3>
+          <p>
+            Furniture, installation, renovation and finishing work are coordinated.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>04</strong>
+          <h3>Final Touches</h3>
+          <p>
+            We focus on the details that make your finished space feel complete.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="eyebrow">Let's Create</div>
+
+      <h2>Ready to transform your space?</h2>
+
+      <p>
+        Tell us what you are planning — whether it is a single piece of
+        furniture or a complete home transformation.
+      </p>
+
+      <a class="button"
+         href="https://wa.me/2507XXXXXXXX?text=Hello%20Alami%20Luxe%2C%20I%20would%20like%20a%20quotation."
+         target="_blank">
+        WhatsApp Us for a Quote
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    <strong>Alami Luxe Living Solutions</strong> • Kigali, Rwanda
+  </p>
+  <p>Creating Homes That Inspire Every Moment.</p>
+</footer>
+
+</body>
+</html>
